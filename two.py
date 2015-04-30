@@ -5,8 +5,9 @@ import types
 
 def recurse(dict, v):
     for key in dict:
-        if key == 'name':
-            print "    " * v, key, ":", dict[key]
+        if key == 'death':
+            if dict[key] == None:
+                print dict['birth'], " - ", dict['name']
 
         if type(dict[key]) is types.DictType:
             recurse(dict[key], v+1)
